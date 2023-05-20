@@ -4,16 +4,17 @@
 #include <vector>
 #include <opencv2/opencv.hpp>
 
-void analyzeImages(std::string &directory, std::vector<cv::Mat> &images)
+void analyzeImages(std::string directory, std::vector<cv::Mat> &images)
 {
-    int lenght;
 
-    if (directory.find("lab"))
-        lenght = 12;
+    int l;
+
+    if (directory.find("lab") != std::string::npos)
+        l = 13;
     else
-        lenght = 23;
+        l = 23;
 
-    for (int i = 1; i <= lenght; i++)
+    for (int i = 1; i <= l; i++)
     {
         std::string filename;
         if (i < 10)
@@ -34,6 +35,11 @@ void analyzeImages(std::string &directory, std::vector<cv::Mat> &images)
         {
             fclose(file);
             image = cv::imread(filepathPng, cv::IMREAD_COLOR);
+        }
+        else
+        {
+            std::cout << "ERROR - UTILS.CPP";
+            return;
         }
 
         images.push_back(image);

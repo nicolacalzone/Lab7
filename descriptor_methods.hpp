@@ -5,9 +5,14 @@
 #include <opencv2/xfeatures2d.hpp>
 #include "utils.hpp"
 
-Result useSURF(cv::Ptr<cv::xfeatures2d::SURF> &det, cv::Mat &img1, cv::Mat &img2);
+// used
+Result useSURF(cv::Ptr<cv::xfeatures2d::SURF> det, cv::Mat &img1, cv::Mat &img2);
+Result useORB(cv::Ptr<cv::ORB> det, cv::Mat &img1, cv::Mat &img2);
+
+// unused
 Result useSIFT(cv::Mat &img1, cv::Mat &img2);
-Result useORB(cv::Mat &img1, cv::Mat &img2);
-void internalProcedure(cv::Mat &img1, cv::Mat &img2, Result &res, cv::Ptr<cv::Feature2D> det);
+
+// for reduntant operations
+void internalOp(cv::Mat &img1, cv::Mat &img2, Result &res, cv::Ptr<cv::Feature2D> det);
 
 #endif // METHODS_H

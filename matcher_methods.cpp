@@ -10,6 +10,17 @@
 
 const std::string dir = "../ResultImages/";
 
+void convertImages(cv::Mat &img1, cv::Mat &img2)
+{
+    // Convert images to 8-bit unsigned integer type
+
+    if (!img1.empty() && img1.type() != CV_8U)
+        img1.convertTo(img1, CV_8U);
+    if (!img2.empty() && img2.type() != CV_8U)
+        img2.convertTo(img2, CV_8U);
+    img2.convertTo(img2, CV_8U);
+}
+
 cv::Mat checkTransformRotation(cv::Mat img1, cv::Mat img2, std::vector<cv::DMatch> matches, Result res)
 {
     const int MIN_MATCH_COUNT = 10; // Set this to the desired value
@@ -56,80 +67,18 @@ cv::Mat checkTransformRotation(cv::Mat img1, cv::Mat img2, std::vector<cv::DMatc
     cv::waitKey();
 }
 
-cv::Mat bruteForceL2(cv::Mat img1, cv::Mat img2, Result res, const int flag)
+/*
+ *
+ *   for SIFT and SURF (non utilizzato perché non filtra le linee... ma funziona meglio)
+ *
+ */
+cv::Mat bruteForceL2(cv::Mat &img1, cv::Mat &img2, Result &res, int flag, int i1, int i2)
 {
-    // Convert images to 8-bit unsigned integer type
-    img1.convertTo(img1, CV_8U);
-    img2.convertTo(img2, CV_8U);
+    convertImages(img1, img2);
 
-    cv::BFMatcher matcher(cv::NORM_L2);
-    std::vector<cv::DMatch> matches;
-    matcher.match(res.descriptor1, res.descriptor2, matches);
-
-    cv::Mat imgMatches;
-    cv::drawMatches(img1, res.kp1, img2, res.kp2, matches, imgMatches);
-
-    std::string file = " L2 ";
-
-    if (flag == 0) // SURF
-    {
-        cv::imshow(file, imgMatches);
-        cv::imwrite(dir + file + "- SURF.png", imgMatches);
-        cv::waitKey();
-    }
-
-    if (flag == 1) // SIFT
-    {
-        cv::imshow(file, imgMatches);
-        cv::imwrite(dir + file + "- SIFT.png", imgMatches);
-        cv::waitKey();
-    }
-}
-
-//  FOR ORB
-void bruteForceHammingSorted(cv::Mat img1, cv::Mat img2, Result res)
-{
-    // Convert images to 8-bit unsigned integer type
-    if (!img1.empty() && img1.type() != CV_8U)
-        img1.convertTo(img1, CV_8U);
-    if (!img2.empty() && img2.type() != CV_8U)
-        img2.convertTo(img2, CV_8U);
-    img2.convertTo(img2, CV_8U);
-
-    // Check and convert descriptors to 8-bit unsigned integer type
-    if (res.descriptor1.type() != CV_8U)
-        res.descriptor1.convertTo(res.descriptor1, CV_8U);
-    if (res.descriptor2.type() != CV_8U)
-        res.descriptor2.convertTo(res.descriptor2, CV_8U);
-
-    cv::BFMatcher bf(cv::NORM_HAMMING, true);
-
-    std::vector<cv::DMatch> matches;
-    bf.match(res.descriptor1, res.descriptor2, matches);
-
-    std::sort(matches.begin(), matches.end());
-
-    cv::Mat imgMatches;
-    cv::drawMatches(img1, res.kp1, img2, res.kp2, matches, imgMatches);
-    // imgMatches = checkTransformRotation(img1, img2, matches, res);
-
-    std::string file = "Hamming - ORB Sorted.png";
-
-    cv::imshow(file, imgMatches);
-    cv::imwrite(dir + file, imgMatches);
-
-    cv::waitKey();
-}
-
-void bruteForceKNN(cv::Mat img1, cv::Mat img2, Result res, int flag)
-{
-    // Convert images to 8-bit unsigned integer type
-    img1.convertTo(img1, CV_8U);
-    img2.convertTo(img2, CV_8U);
-
-    cv::BFMatcher bf;
+    cv::BFMatcher bf(cv::NORM_L2);
     std::vector<std::vector<cv::DMatch>> matches;
-    bf.knnMatch(res.descriptor1, res.descriptor2, matches, 2);
+    bf.knnMatch(res.descriptor1, res.descriptor2, matches, 1);
 
     std::vector<cv::DMatch> goodMatches;
     for (const auto &match : matches)
@@ -142,21 +91,51 @@ void bruteForceKNN(cv::Mat img1, cv::Mat img2, Result res, int flag)
 
     cv::Mat imgMatches;
     cv::drawMatches(img1, res.kp1, img2, res.kp2, matches, imgMatches);
-    // imgMatches = checkTransformRotation(img1, img2, goodMatches, res);
-
-    std::string file = "KNN - Matching ";
+    std::string file = "";
 
     if (flag == 0) // SURF
     {
-        cv::imshow(file, imgMatches);
-        cv::imwrite(dir + file + "- SURF.png", imgMatches);
-        cv::waitKey();
+        // cv::imshow(file, imgMatches);
+        cv::imwrite(dir + file + std::to_string(i1) + " " + std::to_string(i2) + " - SURF.png",
+                    imgMatches);
+        // cv::waitKey();
+    }
+    else if (flag == 1) // SIFT
+    {
+        // cv::imshow(file, imgMatches);
+        cv::imwrite(dir + file + std::to_string(i1) + " " + std::to_string(i2) + " - SIFT.png",
+                    imgMatches);
+        // cv::waitKey();
+    }
+    else
+    {
+        std::cout << "ERRORE - L2 Matcher_Methods.cpp";
     }
 
-    if (flag == 1) // SIFT
-    {
-        cv::imshow(file, imgMatches);
-        cv::imwrite(dir + file + "- SIFT.png", imgMatches);
-        cv::waitKey();
-    }
+    return imgMatches;
+}
+
+/*
+ *
+ *   for ORB
+ *
+ */
+cv::Mat bruteForceHammingSorted(cv::Mat &img1, cv::Mat &img2, Result &res)
+{
+    convertImages(img1, img2);
+    convertImages(res.descriptor1, res.descriptor2);
+
+    cv::BFMatcher bf(cv::NORM_HAMMING, true);
+
+    std::vector<cv::DMatch> matches;
+    bf.match(res.descriptor1, res.descriptor2, matches);
+
+    std::sort(matches.begin(), matches.end());
+
+    cv::Mat imgMatches;
+    cv::drawMatches(img1, res.kp1, img2, res.kp2, matches, imgMatches);
+
+    cv::imwrite(dir + /* std::to_string(i1) + " " + std::to_string(i2) + */ " - ORB.png", imgMatches);
+
+    return imgMatches;
 }

@@ -5,7 +5,7 @@
     USEFUL FUNCTIONS
 */
 
-void analyzeImages(std::string &directory, std::vector<cv::Mat> &images);
+void analyzeImages(std::string directory, std::vector<cv::Mat> &images);
 
 /*
     USEFUL STRUCTURES

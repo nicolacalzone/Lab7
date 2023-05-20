@@ -11,6 +11,9 @@
 #include "descriptor_methods.hpp"
 #include "panoramic_utils2.hpp"
 
+using std::cout;
+using std::endl;
+
 int main(int argc, char *argv[])
 {
     if (argc < 2)
@@ -30,9 +33,12 @@ int main(int argc, char *argv[])
     // SURF descriptor
     Result resSURF;
     cv::Ptr<cv::xfeatures2d::SURF> det = cv::xfeatures2d::SURF::create();
+    // ORB descriptor
+    Result resORB;
+    cv::Ptr<cv::ORB> det = cv::ORB::create();
 
     // Setting the angle
-    if (directory.find("dolomites"))
+    if (directory.find("dolomites") != std::string::npos)
         angle = 27;
     else
         angle = 33;
@@ -42,23 +48,25 @@ int main(int argc, char *argv[])
         cylindricalImages.push_back(PanoramicUtils::cylindricalProj(images[i], angle));
 
     // computes features 2:2
-    for (size_t i = 0; i < cylindricalImages.size(); i += 2)
+    for (size_t curr = 1; curr <= cylindricalImages.size() - 1; curr += 2)
     {
-        // get curr pair of images
-        cv::Mat img1 = cylindricalImages[i];
-        cv::Mat img2 = cylindricalImages[i + 1];
+        int next = curr + 1;
+
+        // get pair
+        cv::Mat img1 = cylindricalImages[curr];
+        cv::Mat img2 = cylindricalImages[next];
 
         // SURF descriptor
-        resSURF = useSURF(det, img1, img2);
+        // resSURF = useSURF(det, img1, img2);
+
+        // ORB descriptor
+        resORB = useORB(det, img1, img2);
 
         // Matching of the two images
-        bruteForceL2(img1, img2, resSURF, 0);
+        // bruteForceL2(img1, img2, resSURF, 0, curr, next);
+        bruteForceHammingSorted(img1, img2, resORB);
 
         // FindHomography
-
-        // end-cycle
-        img1.release();
-        img2.release();
     }
 
     return 0;
