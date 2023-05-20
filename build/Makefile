@@ -123,6 +123,87 @@ task1/fast:
 	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/build
 .PHONY : task1/fast
 
+descriptor_methods.o: descriptor_methods.cpp.o
+
+.PHONY : descriptor_methods.o
+
+# target to build an object file
+descriptor_methods.cpp.o:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/descriptor_methods.cpp.o
+.PHONY : descriptor_methods.cpp.o
+
+descriptor_methods.i: descriptor_methods.cpp.i
+
+.PHONY : descriptor_methods.i
+
+# target to preprocess a source file
+descriptor_methods.cpp.i:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/descriptor_methods.cpp.i
+.PHONY : descriptor_methods.cpp.i
+
+descriptor_methods.s: descriptor_methods.cpp.s
+
+.PHONY : descriptor_methods.s
+
+# target to generate assembly for a file
+descriptor_methods.cpp.s:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/descriptor_methods.cpp.s
+.PHONY : descriptor_methods.cpp.s
+
+matcher_methods.o: matcher_methods.cpp.o
+
+.PHONY : matcher_methods.o
+
+# target to build an object file
+matcher_methods.cpp.o:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/matcher_methods.cpp.o
+.PHONY : matcher_methods.cpp.o
+
+matcher_methods.i: matcher_methods.cpp.i
+
+.PHONY : matcher_methods.i
+
+# target to preprocess a source file
+matcher_methods.cpp.i:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/matcher_methods.cpp.i
+.PHONY : matcher_methods.cpp.i
+
+matcher_methods.s: matcher_methods.cpp.s
+
+.PHONY : matcher_methods.s
+
+# target to generate assembly for a file
+matcher_methods.cpp.s:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/matcher_methods.cpp.s
+.PHONY : matcher_methods.cpp.s
+
+panoramic_utils.o: panoramic_utils.cpp.o
+
+.PHONY : panoramic_utils.o
+
+# target to build an object file
+panoramic_utils.cpp.o:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/panoramic_utils.cpp.o
+.PHONY : panoramic_utils.cpp.o
+
+panoramic_utils.i: panoramic_utils.cpp.i
+
+.PHONY : panoramic_utils.i
+
+# target to preprocess a source file
+panoramic_utils.cpp.i:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/panoramic_utils.cpp.i
+.PHONY : panoramic_utils.cpp.i
+
+panoramic_utils.s: panoramic_utils.cpp.s
+
+.PHONY : panoramic_utils.s
+
+# target to generate assembly for a file
+panoramic_utils.cpp.s:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/panoramic_utils.cpp.s
+.PHONY : panoramic_utils.cpp.s
+
 task1.o: task1.cpp.o
 
 .PHONY : task1.o
@@ -150,6 +231,33 @@ task1.cpp.s:
 	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/task1.cpp.s
 .PHONY : task1.cpp.s
 
+utils.o: utils.cpp.o
+
+.PHONY : utils.o
+
+# target to build an object file
+utils.cpp.o:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/utils.cpp.o
+.PHONY : utils.cpp.o
+
+utils.i: utils.cpp.i
+
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.cpp.i:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/utils.cpp.i
+.PHONY : utils.cpp.i
+
+utils.s: utils.cpp.s
+
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.cpp.s:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/utils.cpp.s
+.PHONY : utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +267,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... task1"
 	@echo "... edit_cache"
+	@echo "... descriptor_methods.o"
+	@echo "... descriptor_methods.i"
+	@echo "... descriptor_methods.s"
+	@echo "... matcher_methods.o"
+	@echo "... matcher_methods.i"
+	@echo "... matcher_methods.s"
+	@echo "... panoramic_utils.o"
+	@echo "... panoramic_utils.i"
+	@echo "... panoramic_utils.s"
 	@echo "... task1.o"
 	@echo "... task1.i"
 	@echo "... task1.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
 .PHONY : help
 
 

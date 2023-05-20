@@ -6,7 +6,8 @@
                 "${workspaceFolder}/**",
                 "/usr/include/opencv2",
                 "~/workspace/opencv_build/opencv/modules/stitching",
-                "~/workspace/opencv_build/opencv_contrib/modules/xfeatures2d"
+                "~/workspace/opencv_build/opencv_contrib/modules/xfeatures2d",
+                "/home/nicola/workspace/opencv_build/opencv_contrib/modules/xfeatures2d/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

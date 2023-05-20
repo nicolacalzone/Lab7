@@ -81,14 +81,118 @@ CMakeFiles/task1.dir/task1.cpp.o.provides: CMakeFiles/task1.dir/task1.cpp.o.requ
 CMakeFiles/task1.dir/task1.cpp.o.provides.build: CMakeFiles/task1.dir/task1.cpp.o
 
 
+CMakeFiles/task1.dir/matcher_methods.cpp.o: CMakeFiles/task1.dir/flags.make
+CMakeFiles/task1.dir/matcher_methods.cpp.o: ../matcher_methods.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicola/opencv/lab7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/task1.dir/matcher_methods.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task1.dir/matcher_methods.cpp.o -c /home/nicola/opencv/lab7/matcher_methods.cpp
+
+CMakeFiles/task1.dir/matcher_methods.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task1.dir/matcher_methods.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicola/opencv/lab7/matcher_methods.cpp > CMakeFiles/task1.dir/matcher_methods.cpp.i
+
+CMakeFiles/task1.dir/matcher_methods.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task1.dir/matcher_methods.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicola/opencv/lab7/matcher_methods.cpp -o CMakeFiles/task1.dir/matcher_methods.cpp.s
+
+CMakeFiles/task1.dir/matcher_methods.cpp.o.requires:
+
+.PHONY : CMakeFiles/task1.dir/matcher_methods.cpp.o.requires
+
+CMakeFiles/task1.dir/matcher_methods.cpp.o.provides: CMakeFiles/task1.dir/matcher_methods.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/matcher_methods.cpp.o.provides.build
+.PHONY : CMakeFiles/task1.dir/matcher_methods.cpp.o.provides
+
+CMakeFiles/task1.dir/matcher_methods.cpp.o.provides.build: CMakeFiles/task1.dir/matcher_methods.cpp.o
+
+
+CMakeFiles/task1.dir/descriptor_methods.cpp.o: CMakeFiles/task1.dir/flags.make
+CMakeFiles/task1.dir/descriptor_methods.cpp.o: ../descriptor_methods.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicola/opencv/lab7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/task1.dir/descriptor_methods.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task1.dir/descriptor_methods.cpp.o -c /home/nicola/opencv/lab7/descriptor_methods.cpp
+
+CMakeFiles/task1.dir/descriptor_methods.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task1.dir/descriptor_methods.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicola/opencv/lab7/descriptor_methods.cpp > CMakeFiles/task1.dir/descriptor_methods.cpp.i
+
+CMakeFiles/task1.dir/descriptor_methods.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task1.dir/descriptor_methods.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicola/opencv/lab7/descriptor_methods.cpp -o CMakeFiles/task1.dir/descriptor_methods.cpp.s
+
+CMakeFiles/task1.dir/descriptor_methods.cpp.o.requires:
+
+.PHONY : CMakeFiles/task1.dir/descriptor_methods.cpp.o.requires
+
+CMakeFiles/task1.dir/descriptor_methods.cpp.o.provides: CMakeFiles/task1.dir/descriptor_methods.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/descriptor_methods.cpp.o.provides.build
+.PHONY : CMakeFiles/task1.dir/descriptor_methods.cpp.o.provides
+
+CMakeFiles/task1.dir/descriptor_methods.cpp.o.provides.build: CMakeFiles/task1.dir/descriptor_methods.cpp.o
+
+
+CMakeFiles/task1.dir/utils.cpp.o: CMakeFiles/task1.dir/flags.make
+CMakeFiles/task1.dir/utils.cpp.o: ../utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicola/opencv/lab7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/task1.dir/utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task1.dir/utils.cpp.o -c /home/nicola/opencv/lab7/utils.cpp
+
+CMakeFiles/task1.dir/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task1.dir/utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicola/opencv/lab7/utils.cpp > CMakeFiles/task1.dir/utils.cpp.i
+
+CMakeFiles/task1.dir/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task1.dir/utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicola/opencv/lab7/utils.cpp -o CMakeFiles/task1.dir/utils.cpp.s
+
+CMakeFiles/task1.dir/utils.cpp.o.requires:
+
+.PHONY : CMakeFiles/task1.dir/utils.cpp.o.requires
+
+CMakeFiles/task1.dir/utils.cpp.o.provides: CMakeFiles/task1.dir/utils.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/utils.cpp.o.provides.build
+.PHONY : CMakeFiles/task1.dir/utils.cpp.o.provides
+
+CMakeFiles/task1.dir/utils.cpp.o.provides.build: CMakeFiles/task1.dir/utils.cpp.o
+
+
+CMakeFiles/task1.dir/panoramic_utils.cpp.o: CMakeFiles/task1.dir/flags.make
+CMakeFiles/task1.dir/panoramic_utils.cpp.o: ../panoramic_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicola/opencv/lab7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/task1.dir/panoramic_utils.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task1.dir/panoramic_utils.cpp.o -c /home/nicola/opencv/lab7/panoramic_utils.cpp
+
+CMakeFiles/task1.dir/panoramic_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task1.dir/panoramic_utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicola/opencv/lab7/panoramic_utils.cpp > CMakeFiles/task1.dir/panoramic_utils.cpp.i
+
+CMakeFiles/task1.dir/panoramic_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task1.dir/panoramic_utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicola/opencv/lab7/panoramic_utils.cpp -o CMakeFiles/task1.dir/panoramic_utils.cpp.s
+
+CMakeFiles/task1.dir/panoramic_utils.cpp.o.requires:
+
+.PHONY : CMakeFiles/task1.dir/panoramic_utils.cpp.o.requires
+
+CMakeFiles/task1.dir/panoramic_utils.cpp.o.provides: CMakeFiles/task1.dir/panoramic_utils.cpp.o.requires
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/panoramic_utils.cpp.o.provides.build
+.PHONY : CMakeFiles/task1.dir/panoramic_utils.cpp.o.provides
+
+CMakeFiles/task1.dir/panoramic_utils.cpp.o.provides.build: CMakeFiles/task1.dir/panoramic_utils.cpp.o
+
+
 # Object files for target task1
 task1_OBJECTS = \
-"CMakeFiles/task1.dir/task1.cpp.o"
+"CMakeFiles/task1.dir/task1.cpp.o" \
+"CMakeFiles/task1.dir/matcher_methods.cpp.o" \
+"CMakeFiles/task1.dir/descriptor_methods.cpp.o" \
+"CMakeFiles/task1.dir/utils.cpp.o" \
+"CMakeFiles/task1.dir/panoramic_utils.cpp.o"
 
 # External object files for target task1
 task1_EXTERNAL_OBJECTS =
 
 task1: CMakeFiles/task1.dir/task1.cpp.o
+task1: CMakeFiles/task1.dir/matcher_methods.cpp.o
+task1: CMakeFiles/task1.dir/descriptor_methods.cpp.o
+task1: CMakeFiles/task1.dir/utils.cpp.o
+task1: CMakeFiles/task1.dir/panoramic_utils.cpp.o
 task1: CMakeFiles/task1.dir/build.make
 task1: /usr/local/lib/libopencv_gapi.so.4.7.0
 task1: /usr/local/lib/libopencv_stitching.so.4.7.0
@@ -144,7 +248,7 @@ task1: /usr/local/lib/libopencv_photo.so.4.7.0
 task1: /usr/local/lib/libopencv_imgproc.so.4.7.0
 task1: /usr/local/lib/libopencv_core.so.4.7.0
 task1: CMakeFiles/task1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nicola/opencv/lab7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable task1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nicola/opencv/lab7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable task1"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/task1.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +257,10 @@ CMakeFiles/task1.dir/build: task1
 .PHONY : CMakeFiles/task1.dir/build
 
 CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/task1.cpp.o.requires
+CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/matcher_methods.cpp.o.requires
+CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/descriptor_methods.cpp.o.requires
+CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/utils.cpp.o.requires
+CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/panoramic_utils.cpp.o.requires
 
 .PHONY : CMakeFiles/task1.dir/requires
 
