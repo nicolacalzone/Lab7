@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/task1.dir/matcher_methods.cpp.o"
   "CMakeFiles/task1.dir/descriptor_methods.cpp.o"
   "CMakeFiles/task1.dir/utils.cpp.o"
-  "CMakeFiles/task1.dir/panoramic_utils.cpp.o"
+  "CMakeFiles/task1.dir/Stitch.cc.o"
   "task1.pdb"
   "task1"
 )

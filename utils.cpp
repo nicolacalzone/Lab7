@@ -1,12 +1,11 @@
-#include <iostream>
-#include <string>
 #include <dirent.h>
-#include <vector>
+#include <iostream>
 #include <opencv2/opencv.hpp>
+#include <string>
+#include <vector>
 
 void analyzeImages(std::string directory, std::vector<cv::Mat> &images)
 {
-
     int l;
 
     if (directory.find("lab") != std::string::npos)
@@ -41,7 +40,6 @@ void analyzeImages(std::string directory, std::vector<cv::Mat> &images)
             std::cout << "ERROR - UTILS.CPP";
             return;
         }
-
         images.push_back(image);
     }
 }

@@ -123,6 +123,33 @@ task1/fast:
 	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/build
 .PHONY : task1/fast
 
+Stitch.o: Stitch.cc.o
+
+.PHONY : Stitch.o
+
+# target to build an object file
+Stitch.cc.o:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/Stitch.cc.o
+.PHONY : Stitch.cc.o
+
+Stitch.i: Stitch.cc.i
+
+.PHONY : Stitch.i
+
+# target to preprocess a source file
+Stitch.cc.i:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/Stitch.cc.i
+.PHONY : Stitch.cc.i
+
+Stitch.s: Stitch.cc.s
+
+.PHONY : Stitch.s
+
+# target to generate assembly for a file
+Stitch.cc.s:
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/Stitch.cc.s
+.PHONY : Stitch.cc.s
+
 descriptor_methods.o: descriptor_methods.cpp.o
 
 .PHONY : descriptor_methods.o
@@ -176,33 +203,6 @@ matcher_methods.s: matcher_methods.cpp.s
 matcher_methods.cpp.s:
 	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/matcher_methods.cpp.s
 .PHONY : matcher_methods.cpp.s
-
-panoramic_utils.o: panoramic_utils.cpp.o
-
-.PHONY : panoramic_utils.o
-
-# target to build an object file
-panoramic_utils.cpp.o:
-	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/panoramic_utils.cpp.o
-.PHONY : panoramic_utils.cpp.o
-
-panoramic_utils.i: panoramic_utils.cpp.i
-
-.PHONY : panoramic_utils.i
-
-# target to preprocess a source file
-panoramic_utils.cpp.i:
-	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/panoramic_utils.cpp.i
-.PHONY : panoramic_utils.cpp.i
-
-panoramic_utils.s: panoramic_utils.cpp.s
-
-.PHONY : panoramic_utils.s
-
-# target to generate assembly for a file
-panoramic_utils.cpp.s:
-	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/panoramic_utils.cpp.s
-.PHONY : panoramic_utils.cpp.s
 
 task1.o: task1.cpp.o
 
@@ -267,15 +267,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... task1"
 	@echo "... edit_cache"
+	@echo "... Stitch.o"
+	@echo "... Stitch.i"
+	@echo "... Stitch.s"
 	@echo "... descriptor_methods.o"
 	@echo "... descriptor_methods.i"
 	@echo "... descriptor_methods.s"
 	@echo "... matcher_methods.o"
 	@echo "... matcher_methods.i"
 	@echo "... matcher_methods.s"
-	@echo "... panoramic_utils.o"
-	@echo "... panoramic_utils.i"
-	@echo "... panoramic_utils.s"
 	@echo "... task1.o"
 	@echo "... task1.i"
 	@echo "... task1.s"

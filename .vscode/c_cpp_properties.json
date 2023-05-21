@@ -7,7 +7,8 @@
                 "/usr/include/opencv2",
                 "~/workspace/opencv_build/opencv/modules/stitching",
                 "~/workspace/opencv_build/opencv_contrib/modules/xfeatures2d",
-                "/home/nicola/workspace/opencv_build/opencv_contrib/modules/xfeatures2d/include"
+                "/home/nicola/workspace/opencv_build/opencv_contrib/modules/xfeatures2d/include",
+                "/home/nicola/opencv/lab7"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

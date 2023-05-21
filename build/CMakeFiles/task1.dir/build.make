@@ -153,28 +153,28 @@ CMakeFiles/task1.dir/utils.cpp.o.provides: CMakeFiles/task1.dir/utils.cpp.o.requ
 CMakeFiles/task1.dir/utils.cpp.o.provides.build: CMakeFiles/task1.dir/utils.cpp.o
 
 
-CMakeFiles/task1.dir/panoramic_utils.cpp.o: CMakeFiles/task1.dir/flags.make
-CMakeFiles/task1.dir/panoramic_utils.cpp.o: ../panoramic_utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicola/opencv/lab7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/task1.dir/panoramic_utils.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task1.dir/panoramic_utils.cpp.o -c /home/nicola/opencv/lab7/panoramic_utils.cpp
+CMakeFiles/task1.dir/Stitch.cc.o: CMakeFiles/task1.dir/flags.make
+CMakeFiles/task1.dir/Stitch.cc.o: ../Stitch.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nicola/opencv/lab7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/task1.dir/Stitch.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/task1.dir/Stitch.cc.o -c /home/nicola/opencv/lab7/Stitch.cc
 
-CMakeFiles/task1.dir/panoramic_utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task1.dir/panoramic_utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicola/opencv/lab7/panoramic_utils.cpp > CMakeFiles/task1.dir/panoramic_utils.cpp.i
+CMakeFiles/task1.dir/Stitch.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task1.dir/Stitch.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nicola/opencv/lab7/Stitch.cc > CMakeFiles/task1.dir/Stitch.cc.i
 
-CMakeFiles/task1.dir/panoramic_utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task1.dir/panoramic_utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicola/opencv/lab7/panoramic_utils.cpp -o CMakeFiles/task1.dir/panoramic_utils.cpp.s
+CMakeFiles/task1.dir/Stitch.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task1.dir/Stitch.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nicola/opencv/lab7/Stitch.cc -o CMakeFiles/task1.dir/Stitch.cc.s
 
-CMakeFiles/task1.dir/panoramic_utils.cpp.o.requires:
+CMakeFiles/task1.dir/Stitch.cc.o.requires:
 
-.PHONY : CMakeFiles/task1.dir/panoramic_utils.cpp.o.requires
+.PHONY : CMakeFiles/task1.dir/Stitch.cc.o.requires
 
-CMakeFiles/task1.dir/panoramic_utils.cpp.o.provides: CMakeFiles/task1.dir/panoramic_utils.cpp.o.requires
-	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/panoramic_utils.cpp.o.provides.build
-.PHONY : CMakeFiles/task1.dir/panoramic_utils.cpp.o.provides
+CMakeFiles/task1.dir/Stitch.cc.o.provides: CMakeFiles/task1.dir/Stitch.cc.o.requires
+	$(MAKE) -f CMakeFiles/task1.dir/build.make CMakeFiles/task1.dir/Stitch.cc.o.provides.build
+.PHONY : CMakeFiles/task1.dir/Stitch.cc.o.provides
 
-CMakeFiles/task1.dir/panoramic_utils.cpp.o.provides.build: CMakeFiles/task1.dir/panoramic_utils.cpp.o
+CMakeFiles/task1.dir/Stitch.cc.o.provides.build: CMakeFiles/task1.dir/Stitch.cc.o
 
 
 # Object files for target task1
@@ -183,7 +183,7 @@ task1_OBJECTS = \
 "CMakeFiles/task1.dir/matcher_methods.cpp.o" \
 "CMakeFiles/task1.dir/descriptor_methods.cpp.o" \
 "CMakeFiles/task1.dir/utils.cpp.o" \
-"CMakeFiles/task1.dir/panoramic_utils.cpp.o"
+"CMakeFiles/task1.dir/Stitch.cc.o"
 
 # External object files for target task1
 task1_EXTERNAL_OBJECTS =
@@ -192,7 +192,7 @@ task1: CMakeFiles/task1.dir/task1.cpp.o
 task1: CMakeFiles/task1.dir/matcher_methods.cpp.o
 task1: CMakeFiles/task1.dir/descriptor_methods.cpp.o
 task1: CMakeFiles/task1.dir/utils.cpp.o
-task1: CMakeFiles/task1.dir/panoramic_utils.cpp.o
+task1: CMakeFiles/task1.dir/Stitch.cc.o
 task1: CMakeFiles/task1.dir/build.make
 task1: /usr/local/lib/libopencv_gapi.so.4.7.0
 task1: /usr/local/lib/libopencv_stitching.so.4.7.0
@@ -260,7 +260,7 @@ CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/task1.cpp.o.requires
 CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/matcher_methods.cpp.o.requires
 CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/descriptor_methods.cpp.o.requires
 CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/utils.cpp.o.requires
-CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/panoramic_utils.cpp.o.requires
+CMakeFiles/task1.dir/requires: CMakeFiles/task1.dir/Stitch.cc.o.requires
 
 .PHONY : CMakeFiles/task1.dir/requires
 
