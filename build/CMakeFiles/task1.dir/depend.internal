@@ -148,10 +148,7 @@ CMakeFiles/task1.dir/descriptor_methods.cpp.o
  /usr/local/include/opencv4/opencv2/flann/config.h
  /usr/local/include/opencv4/opencv2/flann/defines.h
  /usr/local/include/opencv4/opencv2/flann/miniflann.hpp
- /usr/local/include/opencv4/opencv2/highgui.hpp
- /usr/local/include/opencv4/opencv2/imgcodecs.hpp
  /usr/local/include/opencv4/opencv2/opencv_modules.hpp
- /usr/local/include/opencv4/opencv2/videoio.hpp
  /usr/local/include/opencv4/opencv2/xfeatures2d.hpp
  /usr/local/include/opencv4/opencv2/xfeatures2d/nonfree.hpp
 CMakeFiles/task1.dir/matcher_methods.cpp.o

@@ -1,9 +1,3 @@
-#include <array>
-#include <opencv2/core.hpp>
-#include <opencv2/highgui.hpp>
-#include <opencv2/xfeatures2d.hpp>
-#include <opencv2/features2d.hpp>
-#include "utils.hpp"
 #include "descriptor_methods.hpp"
 #include <iostream>
 
@@ -11,16 +5,6 @@ Result useSURF(cv::Ptr<cv::xfeatures2d::SURF> det, cv::Mat &img1, cv::Mat &img2)
 {
     Result res;
     internalOp(img1, img2, res, det);
-    return res;
-}
-
-Result useSIFT(cv::Mat &img1, cv::Mat &img2)
-{
-    cv::Ptr<cv::SIFT> det = cv::SIFT::create();
-
-    Result res;
-    internalOp(img1, img2, res, det);
-
     return res;
 }
 

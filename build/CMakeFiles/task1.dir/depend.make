@@ -147,10 +147,7 @@ CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv
 CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv2/flann/config.h
 CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv2/flann/defines.h
 CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv2/flann/miniflann.hpp
-CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv2/highgui.hpp
-CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv2/imgcodecs.hpp
 CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv2/opencv_modules.hpp
-CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv2/videoio.hpp
 CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv2/xfeatures2d.hpp
 CMakeFiles/task1.dir/descriptor_methods.cpp.o: /usr/local/include/opencv4/opencv2/xfeatures2d/nonfree.hpp
 

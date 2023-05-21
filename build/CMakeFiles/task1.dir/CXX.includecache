@@ -15,26 +15,12 @@ opencv2/opencv.hpp
 -
 
 /home/nicola/opencv/lab7/descriptor_methods.cpp
-array
--
-opencv2/core.hpp
--
-opencv2/highgui.hpp
--
-opencv2/xfeatures2d.hpp
--
-opencv2/features2d.hpp
--
-utils.hpp
-/home/nicola/opencv/lab7/utils.hpp
 descriptor_methods.hpp
 /home/nicola/opencv/lab7/descriptor_methods.hpp
 iostream
 -
 
 /home/nicola/opencv/lab7/descriptor_methods.hpp
-opencv2/core.hpp
--
 opencv2/xfeatures2d.hpp
 -
 utils.hpp

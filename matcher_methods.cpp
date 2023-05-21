@@ -8,45 +8,39 @@ const std::string dir = "../ResultImages/";
 
 cv::Mat stitchImages(cv::Mat img1, cv::Mat img2, Result res)
 {
-    const int MIN_MATCH = 10;
+    const int thresh = 10;
     std::vector<char> matchesMask;
     int mean_X, mean_Y = {};
-    int old_X, old_Y = {};
+    int old_X, old_Y = 0;
     cv::Mat result;
     std::vector<cv::DMatch> matches = res.matches;
 
-    if (matches.size() > MIN_MATCH)
+    if (matches.size() >= thresh)
     {
         std::vector<cv::Point2f> src_pts, dst_pts;
-        for (const auto &m : matches)
+        for (size_t j = 0; j < matches.size(); j++)
         {
-            src_pts.push_back(res.kp1[m.queryIdx].pt);
-            dst_pts.push_back(res.kp2[m.trainIdx].pt);
+            //-- Get the keypoints from the good matches
+            src_pts.push_back(res.kp1[matches[j].queryIdx].pt);
+            dst_pts.push_back(res.kp2[matches[j].trainIdx].pt);
         }
 
-        std::cout << src_pts.size() << std::endl; // FUNZIONA
+        std::cout << src_pts.size() << std::endl; // questo FUNZIONA
         std::cout << dst_pts.size() << std::endl;
 
-        cv::Mat M = cv::findHomography(src_pts, dst_pts, cv::RANSAC);
-
-        cv::imshow("homography", M);
-        cv::waitKey();
+        cv::Mat M = cv::findHomography(src_pts, dst_pts, cv::RANSAC); // questo NON FUNZIONA
+        std::cout << M.size() << M.empty();                           // è vuota
 
         cv::warpPerspective(img1, result, M,
                             cv::Size(img2.cols, img1.rows)); // le immagini presentano parti nere..
                                                              // quando si somma aggiungono parti nere
         result(cv::Rect(0, 0, img2.cols, img2.rows)) = img2;
 
-        cv::imshow("warp", result);
-        cv::waitKey();
-
-        std::cout << "warpPerspective done" << std::endl;
-
         return result;
     }
     else
     {
-        std::cout << "Not enough matches: " << matches.size() << " out of a minimum: " << MIN_MATCH << std::endl;
+        std::cout << "Not enough matches: " << matches.size() << " out of a minimum: " << thresh << std::endl;
         return cv::Mat();
     }
 }
